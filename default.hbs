@@ -1,7 +1,56 @@
 <!DOCTYPE html>
 <html lang="{{lang}}">
 <head>
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1293242832269650",
+    enable_page_level_ads: true
+  });
+</script>
+<script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5CZK2LK');</script>
+<!-- End Google Tag Manager -->
+<!-- Hotjar Tracking Code for https://treadtotriumph.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:854811,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- End of Hotjar Tracking Code-->
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+<script async src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000",
+      "text": "#0f0"
+    },
+    "button": {
+      "background": "#0f0"
+    }
+  },
+  "theme": "edgeless",
+  "content": {
+    "message": "Our website uses cookies to make your browsing experience better. By using our website you agree to our use of cookies."
+  }
+})});
+</script>
+   <meta name="google-site-verification" content="q_a_6JSBA7dCGf1rZkUEJRChhydlB3EP2a87UKmlD3I" />
+   <meta name="msvalidate.01" content="054D975FCB21C934B7F9231EBBF47BA2" />
+   <meta name="yandex-verification" content="65a54c47535580dd" />
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,7 +68,19 @@
 
 </head>
 <body class="{{body_class}}">
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CZK2LK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<amp-auto-ads type="adsense" data-ad-client="ca-pub-1293242832269650"></amp-auto-ads>
     <div class="site-wrapper">
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
@@ -33,7 +94,7 @@
                     <a href="{{@blog.url}}">Latest Posts</a>
                     {{#if @blog.facebook}}<a href="{{facebook_url @blog.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
                     {{#if @blog.twitter}}<a href="{{twitter_url @blog.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
-                    <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+                    {{!<a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a> --}}
                 </nav>
             </div>
         </footer>
@@ -78,6 +139,8 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ac363ec60e57187"></script>
 
 </body>
 </html>

@@ -21,11 +21,11 @@ into the {body} of the default.hbs template --}}
                 <section class="post-full-meta">
                     <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                     {{#primary_tag}}
-                        <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
+                        <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a> <span class="date-divider">/</span><a><div class="readingTimeText"> Reading Time: </div></a> <span class="empty space"> </span> <a><div class="reading-time"> </div></a>
                     {{/primary_tag}}
                 </section>
-                <h1 class="post-full-title">{{title}}</h1>
-            </header>
+                <h1 class="post-full-title">{{title}}</h1><br><div><b><i> SPREAD AND <div class="fb-share-button" data-href="http://www.facebook.com/treadtotriumph" data-layout="button" data-size="large" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.facebook.com%2Ftreadtotriumph&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Spread the word</a></div>❤️</i></b></div>
+      <br><div class="addthis_inline_share_toolbox"></div>      </header>
 
             {{#if feature_image}}
             <figure class="post-full-image" style="background-image: url({{feature_image}})">
@@ -33,7 +33,7 @@ into the {body} of the default.hbs template --}}
             {{/if}}
 
             <section class="post-full-content">
-                {{content}}
+                {{content}} <div>Do <div class="fb-like" data-href="https://www.facebook.com/treadtotriumph/" data-layout="button" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div> us!</div>
             </section>
 
             {{!-- Email subscribe form at the bottom of the page --}}
@@ -61,10 +61,25 @@ into the {body} of the default.hbs template --}}
             </footer>
 
             {{!--
-            <section class="post-full-comments">
-                If you want to embed comments, this is a good place to do it!
-            </section>
+            If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id.
             --}}
+            <section class="post-full-comments">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = '{{url absolute="true"}}';
+                        this.page.identifier = 'ghost-{{comment_id}}';
+                    };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://treadtotriumph.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+            </section>
 
         </article>
 
@@ -190,7 +205,16 @@ $(document).ready(function () {
     window.addEventListener('resize', onResize, false);
 
     update();
+});
+$(function () {
+    var txt = $(".post-full-content")[0].textContent,
+    
+    wordCount = txt.replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
 
+    var readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
+    var readingTimeAsString = readingTimeInMinutes + " min";
+
+    $('article .reading-time').html(readingTimeAsString);
 });
 </script>
 {{/contentFor}}

@@ -1,0 +1,10 @@
+User-agent: *
+Sitemap: https://treadtotriumph.com/sitemap.xml
+Disallow: /ghost/
+Disallow: /themes/
+Disallow: /using-tags/
+Disallow: /private-sites/
+Disallow: /tag/getting-started/
+Disallow: /managing-users/
+Disallow: /advanced-markdown/
+Disallow: /the-editor/
